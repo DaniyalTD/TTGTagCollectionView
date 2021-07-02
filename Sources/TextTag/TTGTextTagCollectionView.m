@@ -69,7 +69,7 @@
     // Border
     [self updateBorderWithPath:path];
     // Shadow
-    [self updateShadowWithPath:path];
+   // [self updateShadowWithPath:path];
 }
 
 #pragma mark - intrinsicContentSize
@@ -161,12 +161,12 @@
     _borderLayer.frame = self.bounds;
     _borderLayer.path = path.CGPath;
     _borderLayer.fillColor = nil;
-    _borderLayer.opacity = 1;
+    _borderLayer.opacity = 0;
     _borderLayer.lineWidth = _config.getRightfulStyle.borderWidth;
     _borderLayer.strokeColor = _config.getRightfulStyle.borderColor.CGColor;
     _borderLayer.lineCap = kCALineCapRound;
     _borderLayer.lineJoin = kCALineJoinRound;
-    [self.layer addSublayer:_borderLayer];
+    //[self.layer addSublayer:_borderLayer];
 }
 
 - (UIBezierPath *)getNewPath {
